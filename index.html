@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iliès Chelagha — Portfolio</title>
+<meta name="description" content="Portfolio d'Iliès Chelagha, futur administrateur réseau et système — BTS SIO SISR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#1e1e1e; --panel:#2b2b2b; --text:#eee; --muted:#aaa; --accent:#4a9c9c; --accent2:#f0a35a; }
+  * { box-sizing:border-box; margin:0; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--text); font:16px/1.6 Poppins, sans-serif; }
+  a { color:var(--accent); }
+  nav { position:sticky; top:0; z-index:10; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:14px 16px; background:#1e1e1ee6; backdrop-filter:blur(6px); }
+  nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+  nav a:hover { color:var(--text); }
+  section { max-width:1000px; margin:0 auto; padding:80px 16px; }
+  h2 { font-size:2rem; font-weight:600; margin-bottom:24px; }
+  h2::before { content:"> "; color:var(--accent); font-family:"JetBrains Mono", monospace; }
+  .hero { min-height:90vh; display:flex; flex-direction:column; justify-content:center; text-align:center; }
+  .hero h1 { font-size:clamp(2rem, 6vw, 3.6rem); font-weight:400; line-height:1.2; }
+  .hero .role { font-size:clamp(1.2rem, 3vw, 1.8rem); color:var(--muted); margin-top:12px; min-height:1.6em; font-family:"JetBrains Mono", monospace; }
+  .hero .role::after { content:"_"; animation:blink 1s steps(1) infinite; color:var(--accent); }
+  @keyframes blink { 50% { opacity:0; } }
+  .hero .links { margin-top:28px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn { padding:10px 22px; border:1px solid var(--accent); border-radius:999px; text-decoration:none; color:var(--text); transition:background .2s; }
+  .btn:hover { background:var(--accent); }
+  .hero small { margin-top:40px; color:var(--muted); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
+  .card { background:var(--panel); border-radius:14px; padding:24px; border-left:3px solid var(--accent); }
+  .card h3 { font-size:1.1rem; margin-bottom:8px; }
+  .card p, .card li { color:var(--muted); font-size:.95rem; }
+  .card ul { padding-left:18px; }
+  .tags { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+  .tag { background:#4a9c9c33; color:var(--text); padding:6px 14px; border-radius:999px; font-size:.9rem; }
+  .project .num { font-family:"JetBrains Mono", monospace; color:var(--accent2); font-size:.85rem; }
+  .project .where { margin-top:12px; font-size:.85rem; }
+  img { max-width:100%; border-radius:14px; display:block; }
+  footer { text-align:center; padding:40px 16px; color:var(--muted); font-size:.9rem; }
+  .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; }
+  .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; } .hero .role::after { animation:none; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="#apropos">Qui suis-je</a>
+  <a href="#formation">Formation</a>
+  <a href="#entreprise">Entreprise</a>
+  <a href="#projets">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header class="hero">
+  <h1>CHELAGHA Iliès</h1>
+  <p class="role" id="role">Futur Administrateur réseau et système.</p>
+  <div class="links">
+    <a class="btn" href="#projets">Mes projets</a>
+    <a class="btn" href="mailto:ilieschelagha1@gmail.com">Contact pro</a>
+  </div>
+  <small>2025 – 2026</small>
+</header>
+
+<section id="apropos" class="reveal">
+  <h2>Qui suis-je</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>CHELAGHA Iliès</h3>
+      <p><strong>Rôle :</strong> apprenti technicien informatique</p>
+      <p><strong>Localisation :</strong> Melun / Limeil-Brévannes</p>
+    </div>
+    <div class="card">
+      <h3>Mon parcours</h3>
+      <ul>
+        <li>BTS SIO SISR — UTEC Melun (en cours)</li>
+        <li>3 années en lycée professionnel Systèmes numériques</li>
+        <li>22 semaines de stage dans différentes entreprises informatiques</li>
+      </ul>
+    </div>
+  </div>
+  <h3 style="margin-top:28px">3 compétences clés</h3>
+  <div class="tags">
+    <span class="tag">Maintenance informatique</span>
+    <span class="tag">Travail collaboratif</span>
+    <span class="tag">Technicien réseau</span>
+  </div>
+</section>
+
+<section id="formation" class="reveal">
+  <h2>Formation</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Mon école : UTEC</h3>
+      <ul>
+        <li>Fondée en 1981</li>
+        <li>Établissement secondaire de la Chambre de Commerce et d'Industrie</li>
+        <li>Basée en Seine-et-Marne (77)</li>
+        <li>Pôles : IT-Cyber Academy, Hospitality Gastronomie Academy, Management &amp; Marketing</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>BTS SIO SISR</h3>
+      <p>Axé sur la gestion et la sécurité des réseaux informatiques, il forme à des métiers comme technicien d'infrastructure ou administrateur systèmes — à la différence du BTS SIO SLAM, orienté programmation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="entreprise" class="reveal">
+  <h2>Entreprise : Sodern</h2>
+  <div class="card" style="margin-bottom:24px">
+    <h3>Sodern — ArianeGroup, créée en 1962</h3>
+    <p>Basée à Limeil-Brévannes (94450). Secteurs :</p>
+    <ul>
+      <li>Équipements pour satellites</li>
+      <li>Navigation sans signaux GNSS</li>
+      <li>Systèmes d'analyse de la matière</li>
+      <li>Tubes neutroniques et générateurs</li>
+    </ul>
+    <p class="where"><a href="https://sodern.com/fr" target="_blank" rel="noopener">sodern.com</a></p>
+  </div>
+  <img src="organigramme.png" alt="Organigramme de Sodern : Direction générale, puis DAF, DC, DE (avec ICYB, SSE, SIMI), DIP, DO et DRH." loading="lazy">
+</section>
+
+<section id="projets" class="reveal">
+  <h2>Projets clés</h2>
+  <div class="grid">
+    <div class="card project">
+      <span class="num">Projet 01</span>
+      <h3>Remplacement d'un parc informatique</h3>
+      <p>Participation au renouvellement complet du parc informatique dans le cadre d'un projet d'amélioration du matériel destiné à l'ensemble des collaborateurs d'une entreprise de plus de 400 postes.</p>
+      <p class="where">Sodern · Limeil-Brévannes</p>
+    </div>
+    <div class="card project">
+      <span class="num">Projet 02</span>
+      <h3>Fabrication et déploiement d'ISO personnalisée</h3>
+      <p>Conception d'une image personnalisée de Windows 11, puis déploiement sur le parc pour migrer de Windows 10 vers Windows 11.</p>
+      <p class="where">Sodern · Limeil-Brévannes</p>
+    </div>
+    <div class="card project">
+      <span class="num">Projet 03</span>
+      <h3>Mise en conformité ISO 27001</h3>
+      <p>Suite aux nouvelles réformes de l'ISO 27001, remise en conformité des pratiques de l'entreprise.</p>
+      <p class="where">Sodern · Limeil-Brévannes</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal" style="text-align:center">
+  <h2>Contact</h2>
+  <p><a class="btn" href="mailto:ilieschelagha1@gmail.com">ilieschelagha1@gmail.com</a></p>
+</section>
+
+<footer>© 2026 Iliès Chelagha</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
