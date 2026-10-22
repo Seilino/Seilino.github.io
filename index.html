@@ -2,161 +2,604 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Iliès Chelagha — Portfolio</title>
-<meta name="description" content="Portfolio d'Iliès Chelagha, futur administrateur réseau et système — BTS SIO SISR.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iliès Chelagha Portfolio</title>
+<meta name="description" content="Portfolio d'Iliès Chelagha, étudiant en BTS SIO option SISR en alternance, futur administrateur réseau et système.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-  :root { --bg:#1e1e1e; --panel:#2b2b2b; --text:#eee; --muted:#aaa; --accent:#4a9c9c; --accent2:#f0a35a; }
-  * { box-sizing:border-box; margin:0; }
-  html { scroll-behavior:smooth; }
-  body { background:var(--bg); color:var(--text); font:16px/1.6 Poppins, sans-serif; }
-  a { color:var(--accent); }
-  nav { position:sticky; top:0; z-index:10; display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:14px 16px; background:#1e1e1ee6; backdrop-filter:blur(6px); }
-  nav a { color:var(--muted); text-decoration:none; font-size:14px; }
-  nav a:hover { color:var(--text); }
-  section { max-width:1000px; margin:0 auto; padding:80px 16px; }
-  h2 { font-size:2rem; font-weight:600; margin-bottom:24px; }
-  h2::before { content:"> "; color:var(--accent); font-family:"JetBrains Mono", monospace; }
-  .hero { min-height:90vh; display:flex; flex-direction:column; justify-content:center; text-align:center; }
-  .hero h1 { font-size:clamp(2rem, 6vw, 3.6rem); font-weight:400; line-height:1.2; }
-  .hero .role { font-size:clamp(1.2rem, 3vw, 1.8rem); color:var(--muted); margin-top:12px; min-height:1.6em; font-family:"JetBrains Mono", monospace; }
-  .hero .role::after { content:"_"; animation:blink 1s steps(1) infinite; color:var(--accent); }
-  @keyframes blink { 50% { opacity:0; } }
-  .hero .links { margin-top:28px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-  .btn { padding:10px 22px; border:1px solid var(--accent); border-radius:999px; text-decoration:none; color:var(--text); transition:background .2s; }
-  .btn:hover { background:var(--accent); }
-  .hero small { margin-top:40px; color:var(--muted); }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
-  .card { background:var(--panel); border-radius:14px; padding:24px; border-left:3px solid var(--accent); }
-  .card h3 { font-size:1.1rem; margin-bottom:8px; }
-  .card p, .card li { color:var(--muted); font-size:.95rem; }
-  .card ul { padding-left:18px; }
-  .tags { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
-  .tag { background:#4a9c9c33; color:var(--text); padding:6px 14px; border-radius:999px; font-size:.9rem; }
-  .project .num { font-family:"JetBrains Mono", monospace; color:var(--accent2); font-size:.85rem; }
-  .project .where { margin-top:12px; font-size:.85rem; }
-  img { max-width:100%; border-radius:14px; display:block; }
-  footer { text-align:center; padding:40px 16px; color:var(--muted); font-size:.9rem; }
-  .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s; }
-  .reveal.in { opacity:1; transform:none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; } .hero .role::after { animation:none; } }
+  :root {
+    --bg: #EDF0F4; --surface: #FFFFFF; --surface-2: #E2E7EE;
+    --ink: #101A25; --ink-2: #4A586A; --ink-3: #6C7A8C; --line: #D0D8E2;
+    --accent: #12857F; --accent-ink: #FFFFFF; --accent-soft: #D5F0EE;
+    --ok: #1C8A4B; --ok-soft: #DDF3E6; --pending: #A86A12; --pending-soft: #FBEBD2;
+    --shadow: 0 1px 2px rgba(16, 26, 37, .06), 0 8px 24px -12px rgba(16, 26, 37, .18);
+    --f-display: "Archivo", "Arial Black", Arial, sans-serif;
+    --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+    --wrap: 1120px; --gutter: clamp(16px, 4vw, 40px); --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0B1118; --surface: #121B26; --surface-2: #1A2533;
+      --ink: #E4EBF3; --ink-2: #A3B1C2; --ink-3: #7D8C9F; --line: #243244;
+      --accent: #4FD1C5; --accent-ink: #0B1118; --accent-soft: #123430;
+      --ok: #52C483; --ok-soft: #133224; --pending: #E6B062; --pending-soft: #3A2C14;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0B1118; --surface: #121B26; --surface-2: #1A2533;
+    --ink: #E4EBF3; --ink-2: #A3B1C2; --ink-3: #7D8C9F; --line: #243244;
+    --accent: #4FD1C5; --accent-ink: #0B1118; --accent-soft: #123430;
+    --ok: #52C483; --ok-soft: #133224; --pending: #E6B062; --pending-soft: #3A2C14;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-body); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  [hidden] { display: none !important; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+  h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  .eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .mono { font-family: var(--f-mono); }
+
+  /* Header */
+  .top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
+  .brand { font-family: var(--f-display); font-stretch: 125%; font-weight: 800; font-size: 15px; letter-spacing: .02em; text-decoration: none; text-transform: uppercase; }
+  .brand span { color: var(--accent); }
+  .nav { display: flex; gap: 4px; align-items: center; }
+  .nav a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--ink-2); padding: 6px 10px; border-radius: 6px; transition: color .15s, background .15s; }
+  .nav a:hover { color: var(--ink); background: var(--surface-2); }
+  .nav a.is-active { color: var(--accent-ink); background: var(--accent); }
+  @media (max-width: 900px) {
+    .top .wrap { flex-direction: column; align-items: flex-start; gap: 6px; padding-block: 10px; }
+    .nav { flex-wrap: wrap; margin-left: -10px; }
+    .nav a { padding: 5px 10px; font-size: 13.5px; }
+  }
+
+  /* Animations (seulement si le JavaScript tourne) */
+  .anim .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); transition-delay: var(--d, 0ms); }
+  .anim .reveal.in { opacity: 1; transform: none; }
+  .anim .page.entering { animation: page-in .45s cubic-bezier(.2, .7, .2, 1); }
+  @keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .hero-name .line { display: block; overflow: hidden; padding-bottom: .06em; }
+  .hero-name .line > span { display: block; }
+  .anim .hero-name .line > span { transform: translateY(105%); transition: transform .9s cubic-bezier(.2, .8, .2, 1); transition-delay: var(--d, 0ms); }
+  .anim .hero-name.in .line > span { transform: none; }
+  .anim .hero-name.reveal { opacity: 1; transform: none; }
+  .state.checking { color: var(--ink-3); background: var(--surface-2); }
+  .state.checking::after { content: ""; display: inline-block; width: 1ch; text-align: left; animation: dots 1s steps(4) infinite; }
+  @keyframes dots { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } }
+  .state.flip { animation: flip .35s ease; }
+  @keyframes flip { from { transform: scale(.8); opacity: .3; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .anim .reveal, .anim .hero-name .line > span { opacity: 1; transform: none; }
+  }
+
+  .pager { margin-top: clamp(40px, 6vw, 64px); padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .pager a { text-decoration: none; display: grid; gap: 2px; padding: 10px 0; }
+  .pager a:last-child { text-align: right; margin-left: auto; }
+  .pager small { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .pager b { font-family: var(--f-display); font-stretch: 112%; font-weight: 800; font-size: 20px; }
+  .pager a:hover b { color: var(--accent); }
+
+  /* Hero */
+  .hero { padding-block: clamp(48px, 9vw, 104px) clamp(48px, 7vw, 80px); }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 64px); align-items: end; }
+  .hero-name { font-stretch: 125%; font-weight: 900; font-size: clamp(44px, 8.4vw, 104px); line-height: .9; letter-spacing: -.02em; text-transform: uppercase; margin-top: 18px; }
+  .hero-name .last { color: var(--accent); }
+  .hero-role { margin-top: 24px; font-size: clamp(18px, 2.1vw, 22px); line-height: 1.45; max-width: 30ch; font-weight: 500; }
+  .hero-sub { margin-top: 12px; color: var(--ink-2); max-width: 52ch; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; font: 600 15px var(--f-body); text-decoration: none; padding: 11px 18px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); transition: transform .15s, border-color .15s; }
+  .btn:hover { border-color: var(--ink-3); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .panel-head { display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); font: 12px var(--f-mono); color: var(--ink-3); }
+  .panel-head .host { color: var(--ink); font-weight: 500; }
+  .avatar { display: flex; gap: 14px; align-items: center; padding: 18px 16px; border-bottom: 1px solid var(--line); }
+  .avatar-img { width: 56px; height: 56px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 800 18px var(--f-display); font-stretch: 125%; }
+  .avatar strong { display: block; }
+  .avatar span { font-size: 14px; color: var(--ink-2); }
+  .svc { list-style: none; margin: 0; padding: 0; }
+  .svc li { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  .svc li:last-child { border-bottom: 0; }
+  .svc .state { grid-row: span 2; align-self: start; margin-top: 2px; font: 500 11px var(--f-mono); letter-spacing: .06em; padding: 2px 7px; border-radius: 4px; min-width: 64px; text-align: center; }
+  .state.ok { color: var(--ok); background: var(--ok-soft); }
+  .state.pending { color: var(--pending); background: var(--pending-soft); }
+  .svc .name { font-weight: 600; font-size: 15px; }
+  .svc .detail { font-size: 14px; color: var(--ink-2); }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; align-items: start; } }
+
+  .shortcuts { padding-block: 0 clamp(56px, 8vw, 96px); }
+  .shortcuts .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .shortcut { display: grid; gap: 8px; align-content: start; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: border-color .15s, transform .15s; }
+  .shortcut:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .shortcut b { font-family: var(--f-display); font-stretch: 110%; font-weight: 800; font-size: 20px; }
+  .shortcut span { font-size: 15px; color: var(--ink-2); }
+  .shortcut .go { font-size: 14px; font-weight: 600; color: var(--accent); }
+  @media (max-width: 760px) { .shortcuts .grid { grid-template-columns: 1fr; } }
+
+  /* Sections */
+  section.block { padding-block: clamp(56px, 8vw, 96px); }
+  .sec-head { display: grid; gap: 10px; margin-bottom: clamp(28px, 4vw, 44px); max-width: 62ch; }
+  .sec-title { font-stretch: 112%; font-weight: 800; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.05; letter-spacing: -.01em; }
+  .sec-lead { color: var(--ink-2); font-size: 17px; }
+  .about { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); }
+  .prose { display: grid; gap: 16px; font-size: 17px; max-width: 62ch; }
+  .prose strong { font-weight: 600; }
+  .side { display: grid; gap: 28px; align-content: start; }
+  .side h3 { font: 500 12px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .chips li { font-size: 14px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .facts li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 15px; }
+  .facts span { color: var(--ink-2); }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+
+  .org { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: clamp(28px, 5vw, 64px); }
+  .org-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: grid; gap: 18px; align-content: start; }
+  .org-card h3 { font-stretch: 110%; font-weight: 800; font-size: 22px; line-height: 1.2; }
+  .org-card p { color: var(--ink-2); font-size: 15px; }
+  .org-card a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .figures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; }
+  .figures div { display: grid; gap: 2px; }
+  .figures b { font: 800 26px var(--f-display); font-stretch: 112%; font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .figures span { font-size: 13px; color: var(--ink-2); line-height: 1.35; }
+  .role { font: 13px var(--f-mono); color: var(--accent); }
+  .missions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-content: start; }
+  .mission { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; background: var(--surface); }
+  .mission h4 { margin: 0 0 10px; font-size: 15px; font-weight: 600; }
+  .mission ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14.5px; color: var(--ink-2); }
+  .mission ul li::marker { color: var(--accent); }
+  .orgchart { margin-top: clamp(32px, 5vw, 48px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+  .orgchart img { border-radius: 6px; }
+  .orgchart figcaption { margin-top: 10px; font-size: 14px; color: var(--ink-3); }
+  @media (max-width: 900px) { .org { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .missions { grid-template-columns: 1fr; } .figures b { font-size: 22px; } }
+
+  .projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .proj { display: flex; flex-direction: column; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; transition: border-color .15s; }
+  .proj:hover { border-color: var(--ink-3); }
+  .proj-meta { display: flex; justify-content: space-between; gap: 8px; }
+  .ctx { font: 11.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .num { font: 11.5px var(--f-mono); color: var(--ink-3); }
+  .proj h3 { font-stretch: 108%; font-weight: 800; font-size: 21px; line-height: 1.2; }
+  .proj p { font-size: 15px; color: var(--ink-2); }
+  .stack { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: auto 0 0; }
+  .stack li { font: 12px var(--f-mono); padding: 3px 8px; border-radius: 4px; background: var(--surface-2); color: var(--ink-2); }
+  .proj-links { padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-3); }
+  @media (max-width: 960px) { .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .projects { grid-template-columns: 1fr; } }
+
+  .path { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); }
+  .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+  .timeline li { position: relative; padding-left: 40px; padding-bottom: 32px; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before { content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--ink-3); }
+  .timeline li.now::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft); }
+  .timeline li.next::before { border-style: dashed; border-color: var(--accent); }
+  .timeline .when { font: 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .timeline li.now .when { color: var(--accent); }
+  .timeline h3 { font: 600 18px var(--f-body); margin-top: 4px; }
+  .timeline p { color: var(--ink-2); font-size: 15px; margin-top: 4px; max-width: 52ch; }
+  .why { padding: 20px; border-radius: var(--radius); background: var(--surface-2); font-size: 15px; color: var(--ink-2); align-self: start; display: grid; gap: 14px; }
+  .why b { color: var(--ink); display: block; margin-bottom: 4px; }
+  @media (max-width: 860px) { .path { grid-template-columns: 1fr; } }
+
+  .contact { background: var(--ink); color: var(--bg); border-radius: 14px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+  .contact .eyebrow { color: color-mix(in srgb, var(--bg) 60%, var(--ink)); }
+  .contact h2 { font-stretch: 118%; font-weight: 900; font-size: clamp(32px, 5vw, 56px); line-height: 1; text-transform: uppercase; margin-top: 12px; }
+  .contact p { margin-top: 16px; color: color-mix(in srgb, var(--bg) 78%, var(--ink)); max-width: 44ch; }
+  .lines { list-style: none; margin: 0; padding: 0; }
+  .lines li { display: grid; grid-template-columns: 90px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid color-mix(in srgb, var(--bg) 18%, var(--ink)); }
+  .lines li:first-child { border-top: 1px solid color-mix(in srgb, var(--bg) 18%, var(--ink)); }
+  .lines .k { font: 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: color-mix(in srgb, var(--bg) 55%, var(--ink)); }
+  .lines .v { font-size: 16px; font-weight: 500; word-break: break-word; text-decoration: none; }
+  .lines a.v:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .copy { font: 500 13px var(--f-body); color: var(--bg); background: transparent; border: 1px solid color-mix(in srgb, var(--bg) 35%, var(--ink)); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+  .copy:hover { border-color: var(--bg); }
+  .contact :focus-visible { outline-color: var(--bg); }
+  @media (max-width: 860px) { .contact { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .lines li { grid-template-columns: 1fr auto; } .lines .k { grid-column: 1 / -1; } }
+
+  footer { padding-block: 32px 40px; color: var(--ink-3); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
 </style>
 </head>
 <body>
-<nav>
-  <a href="#apropos">Qui suis-je</a>
-  <a href="#formation">Formation</a>
-  <a href="#entreprise">Entreprise</a>
-  <a href="#projets">Projets</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<header class="hero">
-  <h1>CHELAGHA Iliès</h1>
-  <p class="role" id="role">Futur Administrateur réseau et système.</p>
-  <div class="links">
-    <a class="btn" href="#projets">Mes projets</a>
-    <a class="btn" href="mailto:ilieschelagha1@gmail.com">Contact pro</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil">Iliès <span>Chelagha</span></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#a-propos">À propos</a>
+      <a href="#formation">Formation</a>
+      <a href="#alternance">Alternance</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-  <small>2025 – 2026</small>
 </header>
 
-<section id="apropos" class="reveal">
-  <h2>Qui suis-je</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>CHELAGHA Iliès</h3>
-      <p><strong>Rôle :</strong> apprenti technicien informatique</p>
-      <p><strong>Localisation :</strong> Melun / Limeil-Brévannes</p>
-    </div>
-    <div class="card">
-      <h3>Mon parcours</h3>
-      <ul>
-        <li>BTS SIO SISR — UTEC Melun (en cours)</li>
-        <li>3 années en lycée professionnel Systèmes numériques</li>
-        <li>22 semaines de stage dans différentes entreprises informatiques</li>
-      </ul>
-    </div>
-  </div>
-  <h3 style="margin-top:28px">3 compétences clés</h3>
-  <div class="tags">
-    <span class="tag">Maintenance informatique</span>
-    <span class="tag">Travail collaboratif</span>
-    <span class="tag">Technicien réseau</span>
-  </div>
-</section>
+<main>
+  <div class="page" id="accueil" data-title="Accueil">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">BTS SIO option SISR · En alternance · 2025–2026</p>
+        <h1 class="hero-name"><span class="line"><span>Iliès</span></span><span class="line last"><span style="--d: 120ms">Chelagha</span></span></h1>
+        <p class="hero-role">Apprenti technicien informatique, futur administrateur réseau et système.</p>
+        <p class="hero-sub">Étudiant à l'UTEC de Melun et alternant chez Sodern (ArianeGroup) à Limeil-Brévannes, où je participe au renouvellement du parc informatique, au déploiement de Windows 11 et à la mise en conformité ISO 27001.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#projets">Voir mes projets</a>
+          <a class="btn" href="https://github.com/Seilino" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="#contact">Contact pro</a>
+        </div>
+      </div>
 
-<section id="formation" class="reveal">
-  <h2>Formation</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Mon école : UTEC</h3>
-      <ul>
-        <li>Fondée en 1981</li>
-        <li>Établissement secondaire de la Chambre de Commerce et d'Industrie</li>
-        <li>Basée en Seine-et-Marne (77)</li>
-        <li>Pôles : IT-Cyber Academy, Hospitality Gastronomie Academy, Management &amp; Marketing</li>
-      </ul>
+      <aside class="panel" aria-label="Résumé de mon profil">
+        <div class="panel-head">
+          <span class="host">ilies-chelagha</span>
+          <span>4 services · 3 OK · 1 en cours</span>
+        </div>
+        <div class="avatar">
+          <div class="avatar-img" aria-hidden="true">IC</div>
+          <div>
+            <strong>Iliès Chelagha</strong>
+            <span>Melun / Limeil-Brévannes</span>
+          </div>
+        </div>
+        <ul class="svc">
+          <li><span class="state ok">OK</span><span class="name">Formation</span><span class="detail">BTS SIO option SISR, UTEC Melun</span></li>
+          <li><span class="state ok">OK</span><span class="name">Alternance</span><span class="detail">Apprenti technicien informatique, Sodern</span></li>
+          <li><span class="state ok">OK</span><span class="name">Expérience</span><span class="detail">22 semaines de stage en entreprises informatiques</span></li>
+          <li><span class="state pending">EN COURS</span><span class="name">Objectif</span><span class="detail">Administrateur réseau et système</span></li>
+        </ul>
+      </aside>
     </div>
-    <div class="card">
-      <h3>BTS SIO SISR</h3>
-      <p>Axé sur la gestion et la sécurité des réseaux informatiques, il forme à des métiers comme technicien d'infrastructure ou administrateur systèmes — à la différence du BTS SIO SLAM, orienté programmation.</p>
+  </section>
+  <section class="shortcuts" aria-label="Accès rapide">
+    <div class="wrap grid">
+      <a class="shortcut" href="#projets">
+        <b>Projets</b>
+        <span>Parc de plus de 400 postes, ISO Windows 11 personnalisée, conformité ISO 27001.</span>
+        <span class="go">Voir les projets →</span>
+      </a>
+      <a class="shortcut" href="#alternance">
+        <b>Alternance</b>
+        <span>Sodern, filiale d'ArianeGroup spécialisée dans les équipements pour satellites.</span>
+        <span class="go">Voir l'alternance →</span>
+      </a>
+      <a class="shortcut" href="#parcours">
+        <b>Parcours</b>
+        <span>Du lycée professionnel Systèmes numériques au BTS SIO SISR.</span>
+        <span class="go">Voir le parcours →</span>
+      </a>
     </div>
+  </section>
   </div>
-</section>
 
-<section id="entreprise" class="reveal">
-  <h2>Entreprise : Sodern</h2>
-  <div class="card" style="margin-bottom:24px">
-    <h3>Sodern — ArianeGroup, créée en 1962</h3>
-    <p>Basée à Limeil-Brévannes (94450). Secteurs :</p>
-    <ul>
-      <li>Équipements pour satellites</li>
-      <li>Navigation sans signaux GNSS</li>
-      <li>Systèmes d'analyse de la matière</li>
-      <li>Tubes neutroniques et générateurs</li>
-    </ul>
-    <p class="where"><a href="https://sodern.com/fr" target="_blank" rel="noopener">sodern.com</a></p>
+  <section class="block page" id="a-propos" data-title="À propos">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">À propos</p>
+        <h2 class="sec-title">Qui suis-je</h2>
+      </div>
+      <div class="about">
+        <div class="prose">
+          <p>Je m'appelle <strong>Iliès Chelagha</strong> et je prépare un <strong>BTS SIO option SISR</strong> (solutions d'infrastructure, systèmes et réseaux) à l'UTEC de Melun, en alternance.</p>
+          <p>Apprenti technicien informatique chez <strong>Sodern</strong> à Limeil-Brévannes, je participe à des projets concrets sur le parc informatique : renouvellement du matériel, déploiement de Windows 11 et mise en conformité avec la norme ISO 27001.</p>
+          <p>Mon objectif : devenir <strong>administrateur réseau et système</strong>.</p>
+        </div>
+        <div class="side">
+          <div>
+            <h3>3 compétences clés</h3>
+            <ul class="chips">
+              <li>Maintenance informatique</li>
+              <li>Travail collaboratif</li>
+              <li>Technicien réseau</li>
+            </ul>
+          </div>
+          <div>
+            <h3>En bref</h3>
+            <ul class="facts">
+              <li><b>Rôle</b><span>Apprenti technicien informatique</span></li>
+              <li><b>Lieu</b><span>Melun / Limeil-Brévannes</span></li>
+              <li><b>Année</b><span>2025–2026</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block page" id="formation" data-title="Formation">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Formation</p>
+        <h2 class="sec-title">BTS SIO SISR à l'UTEC de Melun</h2>
+        <p class="sec-lead">Le BTS SIO SISR est axé sur la gestion et la sécurité des réseaux informatiques. Il forme à des métiers comme technicien d'infrastructure ou administrateur systèmes, à la différence du BTS SIO SLAM, orienté programmation.</p>
+      </div>
+      <div class="org">
+        <div class="org-card">
+          <p class="role">Mon école</p>
+          <h3>UTEC</h3>
+          <p>Établissement de la Chambre de Commerce et d'Industrie, basé en Seine-et-Marne.</p>
+          <div class="figures">
+            <div><b data-count="1981">1981</b><span>année de création</span></div>
+            <div><b>77</b><span>Seine-et-Marne</span></div>
+            <div><b data-count="3">3</b><span>pôles d'expertise</span></div>
+          </div>
+        </div>
+        <div class="missions">
+          <div class="mission"><h4>IT-Cyber Academy</h4><ul><li>Le pôle de ma formation : BTS SIO SISR</li></ul></div>
+          <div class="mission"><h4>Hospitality Gastronomie Academy</h4><ul><li>Hôtellerie et restauration</li></ul></div>
+          <div class="mission"><h4>Management &amp; Marketing</h4><ul><li>Commerce et gestion</li></ul></div>
+          <div class="mission"><h4>SISR vs SLAM</h4><ul><li>SISR : réseaux, systèmes, sécurité</li><li>SLAM : développement d'applications</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block page" id="alternance" data-title="Alternance">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Alternance</p>
+        <h2 class="sec-title">Apprenti technicien informatique chez Sodern</h2>
+        <p class="sec-lead">Filiale d'ArianeGroup créée en 1962, Sodern conçoit des équipements de pointe pour le spatial et la défense. J'y travaille au sein de l'informatique, sur le parc et la sécurité.</p>
+      </div>
+      <div class="org">
+        <div class="org-card">
+          <p class="role">Apprenti technicien informatique</p>
+          <h3>Sodern — ArianeGroup</h3>
+          <p>Basée à Limeil-Brévannes (94450). <a href="https://sodern.com/fr" target="_blank" rel="noopener">sodern.com ↗</a></p>
+          <div class="figures">
+            <div><b data-count="1962">1962</b><span>année de création</span></div>
+            <div><b data-count="400" data-prefix="+">+400</b><span>postes informatiques</span></div>
+            <div><b>94</b><span>Val-de-Marne</span></div>
+          </div>
+        </div>
+        <div class="missions">
+          <div class="mission"><h4>Équipements pour satellites</h4><ul><li>Instruments embarqués pour le spatial</li></ul></div>
+          <div class="mission"><h4>Navigation sans GNSS</h4><ul><li>Navigation sans signaux satellites</li></ul></div>
+          <div class="mission"><h4>Analyse de la matière</h4><ul><li>Systèmes d'analyse</li></ul></div>
+          <div class="mission"><h4>Neutronique</h4><ul><li>Tubes neutroniques et générateurs</li></ul></div>
+        </div>
+      </div>
+      <figure class="orgchart">
+        <img src="organigramme.png" alt="Organigramme de Sodern : Direction générale, puis DAF, DC, DE (avec ICYB, SSE, SIMI), DIP, DO et DRH." loading="lazy">
+        <figcaption>Organigramme : la Direction Établissement (DE) regroupe l'informatique cybersécurité (ICYB) avec l'infrastructure SI, les applications, l'unité cyber et les postes de travail.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block page" id="projets" data-title="Projets">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Projets</p>
+        <h2 class="sec-title">Projets clés</h2>
+        <p class="sec-lead">Trois chantiers menés en alternance chez Sodern.</p>
+      </div>
+      <div class="projects">
+        <article class="proj">
+          <div class="proj-meta"><span class="ctx">Alternance</span><span class="num">01</span></div>
+          <h3>Remplacement d'un parc informatique</h3>
+          <p>Participation au renouvellement complet du parc, dans le cadre d'un projet d'amélioration du matériel destiné à l'ensemble des collaborateurs d'une entreprise de plus de 400 postes.</p>
+          <ul class="stack"><li>Parc informatique</li><li>Matériel</li><li>Déploiement</li></ul>
+          <div class="proj-links">Sodern · Limeil-Brévannes</div>
+        </article>
+        <article class="proj">
+          <div class="proj-meta"><span class="ctx">Alternance</span><span class="num">02</span></div>
+          <h3>Fabrication et déploiement d'ISO personnalisée</h3>
+          <p>Conception d'une image personnalisée de Windows 11, puis déploiement sur le parc pour migrer les postes de Windows 10 vers Windows 11.</p>
+          <ul class="stack"><li>Windows 11</li><li>Image ISO</li><li>Migration</li></ul>
+          <div class="proj-links">Sodern · Limeil-Brévannes</div>
+        </article>
+        <article class="proj">
+          <div class="proj-meta"><span class="ctx">Alternance</span><span class="num">03</span></div>
+          <h3>Mise en conformité ISO 27001</h3>
+          <p>Suite aux nouvelles réformes de l'ISO 27001, remise en conformité des pratiques de l'entreprise.</p>
+          <ul class="stack"><li>ISO 27001</li><li>Cybersécurité</li><li>Conformité</li></ul>
+          <div class="proj-links">Sodern · Limeil-Brévannes</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block page" id="parcours" data-title="Parcours">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Parcours</p>
+        <h2 class="sec-title">Mon parcours</h2>
+      </div>
+      <div class="path">
+        <ol class="timeline">
+          <li class="next">
+            <span class="when">Objectif</span>
+            <h3>Administrateur réseau et système</h3>
+            <p>Continuer à me spécialiser dans l'infrastructure et la sécurité des systèmes.</p>
+          </li>
+          <li class="now">
+            <span class="when">2025 – 2026 · en cours</span>
+            <h3>BTS SIO option SISR — UTEC Melun</h3>
+            <p>En alternance chez Sodern (ArianeGroup), Limeil-Brévannes.</p>
+          </li>
+          <li>
+            <span class="when">3 ans</span>
+            <h3>Lycée professionnel — Systèmes numériques</h3>
+            <p>Avec 22 semaines de stage dans différentes entreprises informatiques.</p>
+          </li>
+        </ol>
+        <div class="why">
+          <div><b>Maintenance informatique</b>Diagnostic, dépannage et renouvellement du matériel.</div>
+          <div><b>Technicien réseau</b>Mise en place et suivi des infrastructures réseau.</div>
+          <div><b>Travail collaboratif</b>Projets menés en équipe au sein du service informatique.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block page" id="contact" data-title="Contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Travaillons ensemble</h2>
+          <p>Une question, une offre ou un projet ? Écrivez-moi, je réponds rapidement.</p>
+        </div>
+        <ul class="lines">
+          <li><span class="k">E-mail</span><a class="v" id="c-mail" href="mailto:ilieschelagha1@gmail.com">ilieschelagha1@gmail.com</a><button class="copy" type="button" data-copy="c-mail">Copier</button></li>
+          <li><span class="k">GitHub</span><a class="v" href="https://github.com/Seilino" target="_blank" rel="noopener">github.com/Seilino</a><span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Iliès Chelagha</span>
+    <span class="mono">BTS SIO · SISR · Melun</span>
   </div>
-  <img src="organigramme.png" alt="Organigramme de Sodern : Direction générale, puis DAF, DC, DE (avec ICYB, SSE, SIMI), DIP, DO et DRH." loading="lazy">
-</section>
-
-<section id="projets" class="reveal">
-  <h2>Projets clés</h2>
-  <div class="grid">
-    <div class="card project">
-      <span class="num">Projet 01</span>
-      <h3>Remplacement d'un parc informatique</h3>
-      <p>Participation au renouvellement complet du parc informatique dans le cadre d'un projet d'amélioration du matériel destiné à l'ensemble des collaborateurs d'une entreprise de plus de 400 postes.</p>
-      <p class="where">Sodern · Limeil-Brévannes</p>
-    </div>
-    <div class="card project">
-      <span class="num">Projet 02</span>
-      <h3>Fabrication et déploiement d'ISO personnalisée</h3>
-      <p>Conception d'une image personnalisée de Windows 11, puis déploiement sur le parc pour migrer de Windows 10 vers Windows 11.</p>
-      <p class="where">Sodern · Limeil-Brévannes</p>
-    </div>
-    <div class="card project">
-      <span class="num">Projet 03</span>
-      <h3>Mise en conformité ISO 27001</h3>
-      <p>Suite aux nouvelles réformes de l'ISO 27001, remise en conformité des pratiques de l'entreprise.</p>
-      <p class="where">Sodern · Limeil-Brévannes</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="reveal" style="text-align:center">
-  <h2>Contact</h2>
-  <p><a class="btn" href="mailto:ilieschelagha1@gmail.com">ilieschelagha1@gmail.com</a></p>
-</section>
-
-<footer>© 2026 Iliès Chelagha</footer>
+</footer>
 
 <script>
-  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: .15 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  (function () {
+    // Animations : les éléments apparaissent quand ils entrent à l'écran
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var canAnimate = !calm && 'IntersectionObserver' in window;
+    if (canAnimate) document.documentElement.classList.add('anim');
+
+    var TARGETS = [
+      '.hero .eyebrow', '.hero-name', '.hero-role', '.hero-sub', '.ctas', '.panel', '.shortcut',
+      '.sec-head', '.prose > p', '.side > div', '.org-card', '.mission', '.orgchart', '.proj',
+      '.timeline > li', '.why', '.contact', '.pager'
+    ].join(',');
+
+    var io = canAnimate ? new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        en.target.classList.add('in');
+        if (en.target.querySelector('[data-count]')) countUp(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 }) : null;
+
+    // Une fois apparu, l'élément retrouve ses propres effets de survol
+    document.addEventListener('transitionend', function (e) {
+      var el = e.target;
+      if (e.propertyName === 'opacity' && el.classList.contains('in') && !el.classList.contains('hero-name')) {
+        el.classList.remove('reveal', 'in');
+        el.style.removeProperty('--d');
+      }
+    });
+
+    function prime(page) {
+      if (!canAnimate) return;
+      page.querySelectorAll(TARGETS).forEach(function (el) {
+        var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(TARGETS); });
+        el.style.setProperty('--d', (Math.min(sibs.indexOf(el), 6) * 90) + 'ms');
+        el.classList.remove('in');
+        el.classList.add('reveal');
+        io.observe(el);
+      });
+      page.classList.remove('entering');
+      void page.offsetWidth;
+      page.classList.add('entering');
+    }
+
+    function countUp(scope) {
+      scope.querySelectorAll('[data-count]').forEach(function (b) {
+        var end = +b.dataset.count, pre = b.dataset.prefix || '', t0 = null, dur = 1200;
+        // Les années partent de 1900 pour ne pas compter depuis 0
+        var start = end > 1000 ? 1900 : 0;
+        function step(t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min((t - t0) / dur, 1);
+          b.textContent = pre + Math.round(start + (end - start) * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }
+
+    // Panneau de supervision : les services sont « vérifiés » un par un
+    var checked = false;
+    function checkServices() {
+      if (checked || !canAnimate) return;
+      checked = true;
+      document.querySelectorAll('.svc .state').forEach(function (s, i) {
+        var label = s.textContent, cls = s.className;
+        s.textContent = '';
+        s.className = 'state checking';
+        setTimeout(function () { s.textContent = label; s.className = cls + ' flip'; }, 900 + i * 380);
+      });
+    }
+
+    // Pages : une seule section visible à la fois, choisie par l'ancre
+    var links = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+    var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+    var ids = pages.map(function (p) { return p.id; });
+
+    pages.forEach(function (p, i) {
+      if (i === 0) return;
+      var prev = pages[i - 1], next = pages[i + 1];
+      var pager = document.createElement('nav');
+      pager.className = 'pager';
+      pager.setAttribute('aria-label', 'Pages voisines');
+      pager.innerHTML =
+        '<a href="#' + prev.id + '"><small>← Précédent</small><b>' + prev.dataset.title + '</b></a>' +
+        (next ? '<a href="#' + next.id + '"><small>Suivant →</small><b>' + next.dataset.title + '</b></a>' : '');
+      p.querySelector('.wrap').appendChild(pager);
+    });
+
+    function show() {
+      var id = location.hash.replace('#', '');
+      if (ids.indexOf(id) === -1) id = 'accueil';
+      pages.forEach(function (p) { p.hidden = p.id !== id; });
+      links.forEach(function (l) {
+        var on = l.getAttribute('href') === '#' + id;
+        l.classList.toggle('is-active', on);
+        if (on) l.setAttribute('aria-current', 'page'); else l.removeAttribute('aria-current');
+      });
+      var cur = pages[ids.indexOf(id)];
+      document.title = id === 'accueil' ? 'Iliès Chelagha Portfolio' : cur.dataset.title + ' · Iliès Chelagha';
+      prime(cur);
+      if (id === 'accueil') checkServices();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+    window.addEventListener('hashchange', show);
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    show();
+
+    // Copier l'e-mail
+    document.querySelectorAll('.copy').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var text = document.getElementById(b.dataset.copy).textContent.trim();
+        var reset = function () { setTimeout(function () { b.textContent = 'Copier'; }, 1600); };
+        try {
+          navigator.clipboard.writeText(text).then(function () { b.textContent = 'Copié'; reset(); }, function () { b.textContent = 'Échec'; reset(); });
+        } catch (e) { b.textContent = 'Échec'; reset(); }
+      });
+    });
+  })();
 </script>
 </body>
 </html>
