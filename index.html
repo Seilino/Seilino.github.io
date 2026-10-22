@@ -171,6 +171,24 @@
     .steps li { padding: 0 0 0 40px; }
   }
 
+  /* ---------- Veille ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .filters button { font: 500 14px var(--f-body); color: var(--ink-2); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+  .filters button:hover { color: var(--ink); border-color: var(--ink-3); }
+  .filters button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .feed { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .feed li { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 6px 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .feed .meta { display: grid; gap: 6px; align-content: start; font: 12px var(--f-mono); color: var(--ink-3); }
+  .feed .t { justify-self: start; padding: 1px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+  .feed .t.admin { background: #4A9C9C26; color: var(--teal); }
+  .feed a { font-weight: 600; font-size: 17px; line-height: 1.35; text-decoration: none; }
+  .feed a:hover { color: var(--accent); }
+  .feed p { color: var(--ink-2); font-size: 15px; margin-top: 4px; }
+  .feed .src { font: 12px var(--f-mono); color: var(--ink-3); margin-top: 6px; }
+  .feed-note { margin-top: 16px; font-size: 14px; color: var(--ink-3); }
+  .feed-note a { color: var(--accent); }
+  @media (max-width: 600px) { .feed li { grid-template-columns: 1fr; } .feed .meta { grid-auto-flow: column; justify-content: start; } }
+
   /* ---------- Contact ---------- */
   .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
   .contact h3 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; line-height: 1.05; letter-spacing: -.03em; }
@@ -215,7 +233,8 @@
       <li><a href="#alternance"><small>03</small>Alternance</a></li>
       <li><a href="#projets"><small>04</small>Projets</a></li>
       <li><a href="#parcours"><small>05</small>Parcours</a></li>
-      <li><a href="#contact"><small>06</small>Contact</a></li>
+      <li><a href="#veille"><small>06</small>Veille</a></li>
+      <li><a href="#contact"><small>07</small>Contact</a></li>
     </ul>
   </nav>
   <div class="side-foot">
@@ -395,8 +414,21 @@ BTS SIO option SISR · UTEC Melun
     </ol>
   </section>
 
+  <section class="sec" id="veille">
+    <div class="head up"><span class="n">06.</span><h2>Veille technologique</h2></div>
+    <p class="lead up">Cybersécurité et administration systèmes et réseaux. Je suis mes sources sur <b>Feedly</b> ; les derniers articles sont ajoutés ici automatiquement chaque lundi.</p>
+    <div class="filters up" role="group" aria-label="Filtrer la veille">
+      <button type="button" data-theme="all" aria-pressed="true">Tout</button>
+      <button type="button" data-theme="cyber" aria-pressed="false">Cybersécurité</button>
+      <button type="button" data-theme="admin" aria-pressed="false">Systèmes et réseaux</button>
+    </div>
+    <ul class="feed" id="feed"></ul>
+    <p class="feed-note" id="feed-note">Chargement de la veille…</p>
+    <p class="feed-note">Sources : CERT-FR, Le Monde Informatique, ZATAZ, IT-Connect, LeMagIT · <a href="veille.opml" download>importer ces sources dans Feedly</a></p>
+  </section>
+
   <section class="sec" id="contact">
-    <div class="head up"><span class="n">06.</span><h2>Contact</h2></div>
+    <div class="head up"><span class="n">07.</span><h2>Contact</h2></div>
     <div class="contact">
       <div class="up">
         <h3>Un projet, une offre&nbsp;? <span>Parlons-en.</span></h3>
@@ -473,6 +505,36 @@ BTS SIO option SISR · UTEC Melun
       }, { rootMargin: '-45% 0px -50% 0px' });
       document.querySelectorAll('main > section').forEach(function (s) { spy.observe(s); });
     }
+
+    // Veille : articles lus depuis veille.json (mis à jour chaque semaine par une action GitHub)
+    var feed = document.getElementById('feed'), note = document.getElementById('feed-note');
+    var THEMES = { cyber: 'Cybersécurité', admin: 'Systèmes', feedly: 'Feedly' };
+    var MONTHS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+    var articles = [];
+    function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+    function day(d) { var p = d.split('-'); return +p[2] + ' ' + MONTHS[+p[1] - 1] + ' ' + p[0]; }
+    function render(theme) {
+      var list = articles.filter(function (a) { return theme === 'all' || a.theme === theme; }).slice(0, 15);
+      feed.innerHTML = list.map(function (a) {
+        var safe = /^https?:\/\//.test(a.url) ? a.url : '#';
+        return '<li><div class="meta"><span>' + esc(day(a.date)) + '</span><span class="t ' + esc(a.theme) + '">' + esc(THEMES[a.theme] || a.theme) + '</span></div>' +
+          '<div><a href="' + esc(safe) + '" target="_blank" rel="noopener">' + esc(a.title) + '</a>' +
+          (a.summary ? '<p>' + esc(a.summary) + '</p>' : '') + '<div class="src">' + esc(a.source) + '</div></div></li>';
+      }).join('');
+      note.hidden = list.length > 0;
+      note.textContent = 'Aucun article pour ce thème cette semaine.';
+    }
+    fetch('veille.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (data) {
+      articles = data;
+      render('all');
+    }).catch(function () { note.textContent = 'La veille n\'a pas pu être chargée.'; });
+    var themeBtns = document.querySelectorAll('.filters button');
+    themeBtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        themeBtns.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+        render(b.dataset.theme);
+      });
+    });
 
     // Copier l'adresse
     var btn = document.getElementById('copy');

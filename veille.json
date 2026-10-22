@@ -1,0 +1,122 @@
+[
+ {
+  "title": "Körber s'appuie sur les SBOM pour unifier la sécurité de ses logiciels",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-kurber-s-appuie-sur-les-sbom-pour-unifier-la-securite-de-ses-logiciels-100863.html",
+  "date": "2026-10-22",
+  "summary": "Lors de la conférence swampUP 2026 de JFrog, organisée du 20 au 22 octobre à Barcelone, les responsables sécurité de (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "GitLab corrige la CVE-2026-110264, une faille critique qui touche toutes les versions depuis 2014",
+  "url": "https://www.it-connect.fr/gitlab-cve-2026-110264-faille-critique-regex-onigmo/",
+  "date": "2026-10-22",
+  "summary": "GitLab a corrigé la CVE-2026-110264, une faille critique exploitable sans authentification qui touche toutes les versions depuis la 7.0, sortie en 2014.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "FortiGate, FortiManager : Fortinet vous demande de patcher tout de suite, mais sans dire ce qu’il corrige",
+  "url": "https://www.it-connect.fr/fortinet-correctifs-urgence-failles-ia-fortios-fortimanager-octobre-2026/",
+  "date": "2026-10-22",
+  "summary": "Fortinet a publié le 22 octobre des correctifs urgents pour FortiOS, FortiManager et FortiAnalyzer, contre des failles critiques détectées grâce à l'IA.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "eMudhra : des clés privées triviales forcent Mozilla, Google, Apple et Microsoft à bloquer 8 certificats",
+  "url": "https://www.it-connect.fr/emudhra-certificats-intermediaires-cles-privees-compromises/",
+  "date": "2026-10-22",
+  "summary": "Huit certificats intermédiaires d’eMudhra reposaient sur des clés privées devinables en quelques secondes. Mozilla, Google, Apple et Microsoft les bloquent.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "SAP et l’IA : l’éditeur et ses clients n’ont pas encore trouvé la formule idéale",
+  "url": "https://www.lemagit.fr/actualites/366652555/SAP-et-lIA-lediteur-et-ses-clients-nont-pas-encore-trouve-la-formule-ideale",
+  "date": "2026-10-22",
+  "summary": "Les utilisateurs francophones de SAP semblent peu nombreux à se lancer dans les projets d’IA au sein de leur ERP. Il faut dire qu’ils font preuve d’une méconnaissance de son offre et l’éditeur sait qu’il doit adapter…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Multiples vulnérabilités dans les produits Mozilla (21 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1346/",
+  "date": "2026-10-21",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Mozilla. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans PHP (21 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/",
+  "date": "2026-10-21",
+  "summary": "De multiples vulnérabilités ont été découvertes dans PHP. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
+  "date": "2026-10-21",
+  "summary": "Une vulnérabilité a été découverte dans MongoDB PHP Driver. Elle permet à un attaquant de provoquer un déni de service à distance.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Nir Peleg, directeur mondial de la sécurité des systèmes d'information chez JFrog : «La gouvernance doit fonctionner à la vitesse des agents »",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-nir-peleg-directeur-mondial-de-la-securite-des-systemes-d-information-chez-jfrog-la-gouvernance-doit-fonctionner-a-la-vitesse-des-agents-100861.html",
+  "date": "2026-10-21",
+  "summary": "Le Monde Informatique : En quoi consiste votre fonctionnalité Local Shadow AI ? Nir Peleg : Nous entrons dans une nouvelle phase (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Arrêtée pour avoir bloqué un robot de livraison Uber",
+  "url": "https://www.zataz.com/arretee-pour-avoir-bloque-un-robot-de-livraison-uber/",
+  "date": "2026-10-21",
+  "summary": "Une manifestante arrêtée pour avoir bloqué un robot Uber et dénoncé l'automatisation des emplois.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Panne chez Orange et Sosh !",
+  "url": "https://www.zataz.com/panne-chez-orange-et-sosh/",
+  "date": "2026-10-21",
+  "summary": "Ce mercredi 21 octobre 2026, une importante panne perturbe le réseau mobile d'Orange et de sa marque low cost Sosh.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Musique IA et faux streams : 18 mois de prison",
+  "url": "https://www.zataz.com/musique-ia-et-faux-streams-18-mois-de-prison/",
+  "date": "2026-10-21",
+  "summary": "Musique IA, faux comptes et royalties détournées : 18 mois de prison pour un fraudeur.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "SafePay, une enseigne plus redoutable qu’il n’y paraît ?",
+  "url": "https://www.lemagit.fr/actualites/366652391/SafePay-une-enseigne-bien-plus-redoutable-quil-ny-parait",
+  "date": "2026-10-21",
+  "summary": "La Cisa américaine estime que les acteurs associés à cette enseigne de ransomware ont fait plus de 600 victimes et dans plusieurs secteurs d’importance vitale.",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "PHP : deux vulnérabilités critiques déjà exploitées en cours de correction",
+  "url": "https://www.lemagit.fr/actualites/366652404/PHP-deux-vulnerabilites-critiques-deja-exploitees-en-cours-de-correction",
+  "date": "2026-10-21",
+  "summary": "Course contre la montre à la fondation PHP pour corriger deux vulnérabilités critiques, déjà exploitées, affectant d’innombrables applications Web. Les correctifs sont prévus pour aujourd’hui.",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Synacktiv étend sa solution d'investigation mobile aux entreprises",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-synacktiv-etend-sa-solution-d-investigation-mobile-aux-entreprises-100860.html",
+  "date": "2026-10-20",
+  "summary": "Le 20 octobre 2026, Synacktiv a annoncé l’ouverture au secteur privé de REVEL&middot;IO SCAN, une déclinaison de sa technologie (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ }
+]

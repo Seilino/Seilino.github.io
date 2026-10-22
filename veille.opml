@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- À importer dans Feedly : Organize Sources > Import OPML -->
+<opml version="1.0">
+  <head><title>Veille technologique — Iliès Chelagha</title></head>
+  <body>
+    <outline text="Cybersécurité" title="Cybersécurité">
+      <outline type="rss" text="CERT-FR" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
+      <outline type="rss" text="Le Monde Informatique — Sécurité" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml" htmlUrl="https://www.lemondeinformatique.fr/"/>
+      <outline type="rss" text="ZATAZ" xmlUrl="https://www.zataz.com/feed/" htmlUrl="https://www.zataz.com/"/>
+    </outline>
+    <outline text="Systèmes et réseaux" title="Systèmes et réseaux">
+      <outline type="rss" text="IT-Connect" xmlUrl="https://www.it-connect.fr/feed/" htmlUrl="https://www.it-connect.fr/"/>
+      <outline type="rss" text="LeMagIT" xmlUrl="https://www.lemagit.fr/rss/ContentSyndication.xml" htmlUrl="https://www.lemagit.fr/"/>
+    </outline>
+  </body>
+</opml>
