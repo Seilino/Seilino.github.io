@@ -1,0 +1,33 @@
+# Met à jour la veille technologique chaque lundi, sans IA : simple lecture des flux RSS (et de Feedly si configuré).
+name: Veille hebdomadaire
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/veille.mjs --test && node scripts/veille.mjs
+        env:
+          FEEDLY_TOKEN: ${{ secrets.FEEDLY_TOKEN }}
+          FEEDLY_STREAM: ${{ secrets.FEEDLY_STREAM }}
+      - name: Enregistrer et republier le site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add veille.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Veille du $(date +%F)"
+          git push
+          # un push fait avec le jeton de l'action ne relance pas toujours GitHub Pages
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
