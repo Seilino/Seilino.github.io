@@ -1,5 +1,125 @@
 [
  {
+  "title": "Tailworm : 11 failles non corrigées dans Tailscale, dont un accès root via Tailscale SSH",
+  "url": "https://www.it-connect.fr/tailworm-failles-tailscale-ssh-root-non-corrigees/",
+  "date": "2026-10-26",
+  "summary": "Avec Tailworm, Erica Windisch a publié 11 failles non corrigées dans Tailscale et Headscale, dont un accès root via Tailscale SSH. Voici comment vous protéger.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Quad9 quitte la France : le DNS 9.9.9.9 sera coupé le 24 novembre 2026",
+  "url": "https://www.it-connect.fr/quad9-quitte-la-france-blocage-dns/",
+  "date": "2026-10-26",
+  "summary": "Vous utilisez le DNS 9.9.9.9 ? Le 24 novembre 2026, Quad9 cessera de servir la France plutôt que d'appliquer un blocage judiciaire. Voici ce que l'on sait.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Popcorn Time : un processus oublié menaçait des millions de PC (CVE-2026-30612)",
+  "url": "https://www.it-connect.fr/popcorn-time-updater-cve-2026-30612/",
+  "date": "2026-10-26",
+  "summary": "Un updater abandonné de Popcorn Time pouvait exécuter du code avec les droits SYSTEM. Eye Security l'a neutralisé à distance sur des millions de machines.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Le cloud Bleu est là",
+  "url": "https://www.lemagit.fr/dessin/Le-cloud-Bleu-est-la",
+  "date": "2026-10-26",
+  "summary": "La joint-venture cloud d’Orange et Capgemini a franchi une étape décisive. Ce cloud souverain, qui propose des technologies Microsoft, passe en disponibilité générale avec plusieurs dizaines de services. Ils devraient…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Salesforce acquiert Braze pour aiguiser Marketing Cloud",
+  "url": "https://www.lemagit.fr/actualites/366652717/Salesforce-acquiert-Braze-pour-aiguiser-Marketing-Cloud",
+  "date": "2026-10-26",
+  "summary": "Salesforce souhaite s’appuyer sur la technologie d’engagement en temps réel de Braze pour renforcer Marketing Cloud. Les analystes comprennent cette logique, mais l’intégration et l’éventuelle migration des clients…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Infrastructures IA : comment concevoir un datacenter pour l’inférence ?",
+  "url": "https://www.lemagit.fr/conseil/Infrastructures-IA-comment-concevoir-un-datacenter-pour-linference",
+  "date": "2026-10-25",
+  "summary": "L'inférence d’IA nécessite une infrastructure différente de celle utilisée pour l'entraînement. Elle ne doit pas être seulement moins puissante. Elle impose aussi des spécificités.",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Chimeraz revendique des fuites visant trois partis français, dont celui du groupe présidentiel",
+  "url": "https://www.zataz.com/chimeraz-revendique-des-fuites-visant-trois-partis-francais/",
+  "date": "2026-10-24",
+  "summary": "Chimeraz revendique des données annoncées comme volées aux partis politiques de Renaissance, LFI et du PCF.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "DeepSeek banni des agences fédérales US",
+  "url": "https://www.zataz.com/deepseek-banni-des-agences-federales-civiles-americaines/",
+  "date": "2026-10-24",
+  "summary": "DeepSeek banni des agences fédérales civiles américaines : portée, calendrier et risques pour les données.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Point Vision : des données de patients dérobées",
+  "url": "https://www.zataz.com/point-vision-des-donnees-de-patients-derobees/",
+  "date": "2026-10-24",
+  "summary": "Cyberattaque chez Point Vision : données de patients volées, exposition possible des motifs de rendez-vous.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans les produits Red Hat (23 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1373/",
+  "date": "2026-10-23",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer un contournement de la politique de sécurité, un déni de service et un problème…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans les produits HPE Aruba Networking (23 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1369/",
+  "date": "2026-10-23",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits HPE Aruba Networking. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Vulnérabilité dans Mattermost Server (23 octobre 2026)",
+  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1368/",
+  "date": "2026-10-23",
+  "summary": "Une vulnérabilité a été découverte dans Mattermost Server. Elle permet à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "GitLab corrige une faille critique vieille de douze ans",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-gitlab-corrige-une-faille-critique-vieille-de-douze-ans-100870.html",
+  "date": "2026-10-23",
+  "summary": "Douze ans de versions concernées et un niveau de gravité maximal. Le 21 octobre, GitLab a publié des correctifs de sécurité (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Meta condamné à verser 25 Md$ pour avoir trompé ses utilisateurs sur la confidentialité",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-meta-condamne-a-verser-25-md$-pour-avoir-trompe-ses-utilisateurs-sur-la-confidentialite-100868.html",
+  "date": "2026-10-23",
+  "summary": "Meta fait face à une sanction financière exceptionnelle aux États-Unis. Le 21 octobre 2026, un juge du Nouveau-Mexique a ordonné (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Frigos de supermarchés piratés : l'Anssi pointe des failles de sécurité élémentaires",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-frigos-de-supermarches-pirates-l-anssi-pointe-des-failles-de-securite-elementaires-100864.html",
+  "date": "2026-10-22",
+  "summary": "Dix jours après la cyberattaque qui a touché les chambres froides de centaines de supermarchés français, l’Anssi (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
   "title": "Körber s'appuie sur les SBOM pour unifier la sécurité de ses logiciels",
   "url": "https://www.lemondeinformatique.fr/actualites/lire-kurber-s-appuie-sur-les-sbom-pour-unifier-la-securite-de-ses-logiciels-100863.html",
   "date": "2026-10-22",
