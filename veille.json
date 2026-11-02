@@ -1,5 +1,101 @@
 [
  {
+  "title": "Binance victime d'un vol de cryptomonnaies de 6,3 Md$",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-binance-victime-d-un-vol-de-cryptomonnaies-de-6-3-md$-100895.html",
+  "date": "2026-11-02",
+  "summary": "Le secteur des cryptomonnaies fait face à l'une des plus importantes crises de sécurité de son histoire. Binance, l'une des principales (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Cloud & Cyber Security Expo Paris 2026 : les grands enjeux cyber au cœur du programme",
+  "url": "https://www.it-connect.fr/cloud-cyber-security-expo-paris-2026-programme/",
+  "date": "2026-11-02",
+  "summary": "IA, gestion des incidents, NIS2, CRA et géopolitique : découvrez les thèmes des conférences de Cloud & Cyber Security Expo Paris, les 18 et 19 novembre 2026.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "CVE-2026-98432 : la faille critique du noyau Linux qui peut offrir un accès root à distance",
+  "url": "https://www.it-connect.fr/cve-2026-98432-faille-noyau-linux-tcp-root-distance/",
+  "date": "2026-11-02",
+  "summary": "Une nouvelle faille critique dans le noyau Linux (CVE-2026-98432) : RHEL, Debian, SUSE et Proxmox sont patchés, pas Ubuntu. Quel noyau installer ?",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Steam : des failles permettaient d’exécuter du code à distance sur un PC, sans aucun clic",
+  "url": "https://www.it-connect.fr/steam-rce-zero-click-elevation-privileges-atredis/",
+  "date": "2026-11-02",
+  "summary": "Un chercheur a découvert dans Steam une faille RCE zero-click entre PC liés au même compte, et quatre élévations de privilèges SYSTEM sous Windows.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "5G : les télécoms européens en passe de s’unir autour de l’architecture Sylva",
+  "url": "https://www.lemagit.fr/actualites/366653333/5G-les-telecoms-europeens-en-passe-de-sunir-autour-de-larchitecture-Sylva",
+  "date": "2026-11-02",
+  "summary": "Sylva, un framework Open source hébergé par la Linux Foundation Europe, vise à standardiser les infrastructures cloud qui pilotent les communications de la 5G. Les opérateurs considèrent qu’ils ont plus à gagner à se…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "90 % du code de Claude est désormais écrit par Claude",
+  "url": "https://www.lemagit.fr/dessin/90-du-code-de-Claude-est-desormais-ecrit-par-Claude",
+  "date": "2026-11-02",
+  "summary": "Anthropic a publié son document S-1 en vue de son entrée en bourse. Le dossier révèle comment l’éditeur a optimisé son infrastructure et son ingénierie, pour devenir profitable en un temps record. Mais ses engagements…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Mistral AI ouvre à Orange Cyberdefense l'accès anticipé à une version spécialisée de Large 4",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-mistral-ai-ouvre-a-orange-cyberdefense-l-acces-anticipe-a-une-version-specialisee-de-large-4-100890.html",
+  "date": "2026-11-01",
+  "summary": "Alors que Mistral vient d’ouvrir les poids de son modèle Large 4, le fournisseur français s'associe à Orange Cyberdefense premier (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans les produits IBM (30 octobre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1433/",
+  "date": "2026-10-30",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans les produits Apple (30 octobre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1421/",
+  "date": "2026-10-30",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Apple. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Vulnérabilité dans Stormshield Management Center (30 octobre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1429/",
+  "date": "2026-10-30",
+  "summary": "Une vulnérabilité a été découverte dans Stormshield Management Center. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Mistral AI ouvre les poids de son modèle Large 4",
+  "url": "https://www.lemondeinformatique.fr/actualites/lire-mistral-ai-ouvre-les-poids-de-son-modele-large-4-100889.html",
+  "date": "2026-10-30",
+  "summary": "Mistral AI poursuit le développement de son offre de modèles ouverts. L’entreprise annonce la mise à disposition sur Hugging (...)",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Mistral ouvre les poids de Mistral Large 4 et se rapproche d’Orange Cyberdefense",
+  "url": "https://www.lemagit.fr/actualites/366653113/Mistral-ouvre-les-poids-de-Mistral-Large-4-et-se-rapproche-dOrange-Cyberdefense",
+  "date": "2026-10-30",
+  "summary": "Si l’ouverture des poids de Mistral Large 4 n’apprend pas grand-chose sur ses qualités et ses défauts, les tests revus et corrigés d’Artificial Analysis prouvent les dires du laboratoire français en matière d’IA…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
   "title": "Tailworm : 11 failles non corrigées dans Tailscale, dont un accès root via Tailscale SSH",
   "url": "https://www.it-connect.fr/tailworm-failles-tailscale-ssh-root-non-corrigees/",
   "date": "2026-10-26",
