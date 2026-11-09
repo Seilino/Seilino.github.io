@@ -1,5 +1,101 @@
 [
  {
+  "title": "Nvidia : l’espionnage par la séduction et le social engineering",
+  "url": "https://www.zataz.com/nvidia-lespionnage-par-la-seduction-et-le-social-engineering/",
+  "date": "2026-11-09",
+  "summary": "Nvidia, espionnage chinois et social engineering : comprendre les manipulations humaines et apprendre à les contrer.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Un pirate revendique le vol de millions de données d’automobilistes français",
+  "url": "https://www.zataz.com/sgs-un-pirate-revendique-259-millions-de-lignes-volees/",
+  "date": "2026-11-09",
+  "summary": "Un pirate revendique une base SGS concernant 22 millions d'automobilistes : des données voitures et clients volées ?",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "NoName vise Free, La Poste Mobile et Danfoss",
+  "url": "https://www.zataz.com/noname-vise-free-la-poste-mobile-et-danfoss/",
+  "date": "2026-11-09",
+  "summary": "NoName vise Free, La Poste Mobile et Danfoss. ZATAZ distingue données volées, DDoS et revendications industrielles.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "VMware vSphere Express : Broadcom revient vers les PME avec une nouvelle offre !",
+  "url": "https://www.it-connect.fr/vmware-vsphere-express-128-coeurs-pme/",
+  "date": "2026-11-09",
+  "summary": "128 cœurs, pas un de plus : avec vSphere Express, Broadcom veut séduire à nouveau les PME, dont beaucoup lorgnent vers Proxmox. Voici ce qu'il faut savoir.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Bon plan : les serrures connectées WELOCK aux prix les plus bas de l’année pour le 11.11",
+  "url": "https://www.it-connect.fr/bon-plan-welock-novembre-2026-single-day/",
+  "date": "2026-11-09",
+  "summary": "Profitez du 11.11 pour équiper votre porte d’une serrure connectée WELOCK à prix réduit : déverrouillage par empreinte, code ou smartphone. Notre sélection d'offres.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Moins d’un PC Windows sur deux patché en 2 semaines, et c’est risqué avec l’IA !",
+  "url": "https://www.it-connect.fr/microsoft-windows-mises-a-jour-securite-patch-gap-ia/",
+  "date": "2026-11-09",
+  "summary": "Selon Microsoft, moins d'un appareil Windows sur deux en entreprise installe le patch de sécurité en deux semaines. Un délai risqué face à l'IA. Voici pourquoi.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (06 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1470/",
+  "date": "2026-11-06",
+  "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans le noyau Linux d'Ubuntu (06 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1469/",
+  "date": "2026-11-06",
+  "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux d'Ubuntu. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à l'intégrité des données et un…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Vulnérabilité dans les produits VMware (06 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1474/",
+  "date": "2026-11-06",
+  "summary": "Une vulnérabilité a été découverte dans les produits VMware. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Oui, l’IA agentique accélère le passage à Rust, mais attention aux déconvenues",
+  "url": "https://www.lemagit.fr/actualites/366653933/Oui-lIA-agentique-accelere-le-passage-a-Rust-mais-attention-aux-deconvenues",
+  "date": "2026-11-06",
+  "summary": "Grâce à son mécanisme de sécurité de la mémoire et ses performances, Rust gagne en popularité pour la modernisation de back-end. Sa courbe d’apprentissage abrupte en a d’abord fait le langage des fournisseurs. L’IA…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Il n’y a pas un métier de RSSI, mais des métiers : regard de cinq secteurs économiques",
+  "url": "https://www.lemagit.fr/conseil/Il-ny-a-pas-un-metier-de-RSSI-mais-des-metiers-regard-de-cinq-secteurs-economiques",
+  "date": "2026-11-06",
+  "summary": "Un seul titre, des fonctions multiples : les RSSI de Fastly, SolarWinds, DeVry et d’autres organisations expliquent comment leurs secteurs respectifs façonnent leurs responsabilités et leurs priorités.",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Navigateur d’entreprise sécurisé ou extensions de sécurité : comment choisir",
+  "url": "https://www.lemagit.fr/conseil/Navigateur-dentreprise-securise-ou-extensions-de-securite-comment-choisir",
+  "date": "2026-11-06",
+  "summary": "Les acteurs malveillants ciblent et exploitent depuis longtemps les vulnérabilités des navigateurs. La généralisation de l’IA accroît ce risque et oblige les RSSI à réexaminer leurs options en matière de sécurité du…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
   "title": "Binance victime d'un vol de cryptomonnaies de 6,3 Md$",
   "url": "https://www.lemondeinformatique.fr/actualites/lire-binance-victime-d-un-vol-de-cryptomonnaies-de-6-3-md$-100895.html",
   "date": "2026-11-02",
