@@ -1,5 +1,125 @@
 [
  {
+  "title": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-048/",
+  "date": "2026-11-16",
+  "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans Microsoft Edge (16 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1546/",
+  "date": "2026-11-16",
+  "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Multiples vulnérabilités dans Kerberos (16 novembre 2026)",
+  "url": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1540/",
+  "date": "2026-11-16",
+  "summary": "De multiples vulnérabilités ont été découvertes dans Kerberos. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à…",
+  "source": "CERT-FR",
+  "theme": "cyber"
+ },
+ {
+  "title": "Cursor : une clé volée chez Fireworks AI à l’origine d’une cyberattaque",
+  "url": "https://www.lemondeinformatique.fr/cybersecurite-conformite/cursor-une-cle-volee-chez-fireworks-ai-a-l-origine",
+  "date": "2026-11-16",
+  "summary": "Cursor a détaillé les circonstances de la cyberattaque ayant permis la diffusion d’une version malveillante de l’extension Claude Code sur sa marketplace. Dans un rapport publié le 13 novembre 2026, l’éditeur affirme…",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "PostgreSQL corrige 52 failles, dont une vieille de 22 ans",
+  "url": "https://www.lemondeinformatique.fr/cybersecurite-conformite/postgresql-corrige-52-failles-dont-une-vieille-de-",
+  "date": "2026-11-16",
+  "summary": "Le PostgreSQL Global Development Group a publié, le 12 novembre 2026, des mises à jour corrigeant 52 vulnérabilités de sécurité, dont 32 affichent un score CVSS de 8,8. Parmi elles, CVE-2026-6460 permet une exécution de…",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
+  "title": "Erreur 0x80041008 : Microsoft corrige l’activation de Windows avec des mises à jour hors bande",
+  "url": "https://www.it-connect.fr/windows-mise-a-jour-hors-bande-activation-slmgr-080041008/",
+  "date": "2026-11-16",
+  "summary": "Microsoft a publié des mises à jour hors bande pour corriger l'erreur 0x80041008 qui bloque l'activation de Windows via slmgr.vbs. Voici les KB à installer.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "GTA 6 : comment 212 Go arrivent sur des millions de consoles sans saturer Internet ?",
+  "url": "https://www.it-connect.fr/gta-6-prechargement-cdn-chiffrement/",
+  "date": "2026-11-16",
+  "summary": "GTA 6 pèse jusqu'à 212 Go et sort le 19 novembre. Préchargement, CDN, clé livrée au lancement : voici comment le réseau absorbe des millions de téléchargements.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Bon plan Geekom : les meilleures offres sur les mini-PC avant même le Black Friday",
+  "url": "https://www.it-connect.fr/bon-plan-geekom-les-meilleures-offres-sur-les-mini-pc-avant-meme-le-black-friday/",
+  "date": "2026-11-16",
+  "summary": "Vente flash Geekom : économisez jusqu’à 200€ sur l’IT13 Max et l’A5 Pro jusqu'au 3 décembre 2026. Codes promo exclusifs et livraisons gratuites.",
+  "source": "IT-Connect",
+  "theme": "admin"
+ },
+ {
+  "title": "Test d'intrusion : ces framework agentiques détournés à des fins malveillantes",
+  "url": "https://www.lemagit.fr/actualites/366654832/Test-dintrusion-ces-framework-agentiques-detournes-a-des-fins-malveillantes",
+  "date": "2026-11-16",
+  "summary": "Rendu public en juillet, Artex, un framework de test d'intrusion ouvert, agentique et multi-agents, ne cesse de faire de parler de lui, ayant même fait réagir le RSSI monde de Microsoft. Mais il n'est pas seul, loin de…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "La démission de Jensen Huang pourrait sonner la fin des néoclouds",
+  "url": "https://www.lemagit.fr/actualites/366654781/La-demission-de-Jensen-Huang-pourrait-sonner-la-fin-des-neoclouds",
+  "date": "2026-11-16",
+  "summary": "Le départ surprise du patron de Nvidia, suite à un scandale d’adultère, tombe à point nommé pour stopper un système de financement circulaire qu’il avait mis en place et qui menaçait de plus en plus l’économie…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "IA : Gemini 4 Hydrogen pèche (lui aussi) par gourmandise",
+  "url": "https://www.lemagit.fr/actualites/366654780/IA-Gemini-4-Hydrogen-peche-lui-aussi-par-gourmandise",
+  "date": "2026-11-16",
+  "summary": "S’il remplace avantageusement Gemini 3.8 Flash en se rapprochant de Sonnet 5.5 et GPT-6.1 Sol, Gemini 4 Hydrogen souffre d’une consommation de tokens trop gourmande. La faute à sa chaîne de pensée qui, en contrepartie,…",
+  "source": "LeMagIT",
+  "theme": "admin"
+ },
+ {
+  "title": "Stripe va masquer ses clés API secrètes le 20 novembre",
+  "url": "https://www.zataz.com/stripe-va-masquer-ses-cles-api-secretes-le-20-novembre/",
+  "date": "2026-11-15",
+  "summary": "Stripe masquera ses anciennes clés API secrètes le 20 novembre 2026. ZATAZ analyse les risques et les conséquences.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Aréas Assurances visée par une vente de données",
+  "url": "https://www.zataz.com/areas-assurances-vise-par-une-vente-de-donnees/",
+  "date": "2026-11-15",
+  "summary": "Un pirate informatique affirme détenir les données de plus de 21 000 assurés d’Aréas Assurances, dont leurs numéros de Sécurité sociale.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Techfive cité dans une annonce de vente de données",
+  "url": "https://www.zataz.com/techfive-cite-dans-une-annonce-de-vente-de-donnees/",
+  "date": "2026-11-15",
+  "summary": "Un pirate informatique annonce la vente de 400 entreprises retrouvées chez chez un professionnel de l'encaissement et du paiement.",
+  "source": "ZATAZ",
+  "theme": "cyber"
+ },
+ {
+  "title": "Rennes va accueillir un centre international dédié à l’IA de défense",
+  "url": "https://www.lemondeinformatique.fr/cybersecurite-conformite/rennes-va-accueillir-un-centre-international-dedie",
+  "date": "2026-11-13",
+  "summary": "Prévu pour l’été 2027, l’International Center for Artificial Intelligence in Defence (ICAID) réunira plusieurs pays alliés pour travailler sur le développement, l’évaluation et l’interopérabilité des systèmes d’IA…",
+  "source": "Le Monde Informatique",
+  "theme": "cyber"
+ },
+ {
   "title": "Nvidia : l’espionnage par la séduction et le social engineering",
   "url": "https://www.zataz.com/nvidia-lespionnage-par-la-seduction-et-le-social-engineering/",
   "date": "2026-11-09",
@@ -357,78 +477,6 @@
   "date": "2026-10-21",
   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Mozilla. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données…",
   "source": "CERT-FR",
-  "theme": "cyber"
- },
- {
-  "title": "Multiples vulnérabilités dans PHP (21 octobre 2026)",
-  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1359/",
-  "date": "2026-10-21",
-  "summary": "De multiples vulnérabilités ont été découvertes dans PHP. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
-  "source": "CERT-FR",
-  "theme": "cyber"
- },
- {
-  "title": "Vulnérabilité dans MongoDB PHP Driver (21 octobre 2026)",
-  "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2026-AVI-1347/",
-  "date": "2026-10-21",
-  "summary": "Une vulnérabilité a été découverte dans MongoDB PHP Driver. Elle permet à un attaquant de provoquer un déni de service à distance.",
-  "source": "CERT-FR",
-  "theme": "cyber"
- },
- {
-  "title": "Nir Peleg, directeur mondial de la sécurité des systèmes d'information chez JFrog : «La gouvernance doit fonctionner à la vitesse des agents »",
-  "url": "https://www.lemondeinformatique.fr/actualites/lire-nir-peleg-directeur-mondial-de-la-securite-des-systemes-d-information-chez-jfrog-la-gouvernance-doit-fonctionner-a-la-vitesse-des-agents-100861.html",
-  "date": "2026-10-21",
-  "summary": "Le Monde Informatique : En quoi consiste votre fonctionnalité Local Shadow AI ? Nir Peleg : Nous entrons dans une nouvelle phase (...)",
-  "source": "Le Monde Informatique",
-  "theme": "cyber"
- },
- {
-  "title": "Arrêtée pour avoir bloqué un robot de livraison Uber",
-  "url": "https://www.zataz.com/arretee-pour-avoir-bloque-un-robot-de-livraison-uber/",
-  "date": "2026-10-21",
-  "summary": "Une manifestante arrêtée pour avoir bloqué un robot Uber et dénoncé l'automatisation des emplois.",
-  "source": "ZATAZ",
-  "theme": "cyber"
- },
- {
-  "title": "Panne chez Orange et Sosh !",
-  "url": "https://www.zataz.com/panne-chez-orange-et-sosh/",
-  "date": "2026-10-21",
-  "summary": "Ce mercredi 21 octobre 2026, une importante panne perturbe le réseau mobile d'Orange et de sa marque low cost Sosh.",
-  "source": "ZATAZ",
-  "theme": "cyber"
- },
- {
-  "title": "Musique IA et faux streams : 18 mois de prison",
-  "url": "https://www.zataz.com/musique-ia-et-faux-streams-18-mois-de-prison/",
-  "date": "2026-10-21",
-  "summary": "Musique IA, faux comptes et royalties détournées : 18 mois de prison pour un fraudeur.",
-  "source": "ZATAZ",
-  "theme": "cyber"
- },
- {
-  "title": "SafePay, une enseigne plus redoutable qu’il n’y paraît ?",
-  "url": "https://www.lemagit.fr/actualites/366652391/SafePay-une-enseigne-bien-plus-redoutable-quil-ny-parait",
-  "date": "2026-10-21",
-  "summary": "La Cisa américaine estime que les acteurs associés à cette enseigne de ransomware ont fait plus de 600 victimes et dans plusieurs secteurs d’importance vitale.",
-  "source": "LeMagIT",
-  "theme": "admin"
- },
- {
-  "title": "PHP : deux vulnérabilités critiques déjà exploitées en cours de correction",
-  "url": "https://www.lemagit.fr/actualites/366652404/PHP-deux-vulnerabilites-critiques-deja-exploitees-en-cours-de-correction",
-  "date": "2026-10-21",
-  "summary": "Course contre la montre à la fondation PHP pour corriger deux vulnérabilités critiques, déjà exploitées, affectant d’innombrables applications Web. Les correctifs sont prévus pour aujourd’hui.",
-  "source": "LeMagIT",
-  "theme": "admin"
- },
- {
-  "title": "Synacktiv étend sa solution d'investigation mobile aux entreprises",
-  "url": "https://www.lemondeinformatique.fr/actualites/lire-synacktiv-etend-sa-solution-d-investigation-mobile-aux-entreprises-100860.html",
-  "date": "2026-10-20",
-  "summary": "Le 20 octobre 2026, Synacktiv a annoncé l’ouverture au secteur privé de REVEL·IO SCAN, une déclinaison de sa technologie (...)",
-  "source": "Le Monde Informatique",
   "theme": "cyber"
  }
 ]
